@@ -1,2 +1,3 @@
-# expenseTrackerDVM
- submission for DVM task 1
+# expensetracker
+
+the database persistence is sort of fucked
