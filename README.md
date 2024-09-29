@@ -1,3 +1,3 @@
-# expensetracker
+# expenses
 
-the database persistence is sort of fucked
+A new Flutter project.

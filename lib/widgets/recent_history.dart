@@ -1,8 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:expensetracker/models/Payment.dart';
+import 'package:expenses/models/payment.dart';
 
+// ignore: must_be_immutable
 class HistoryCard extends StatelessWidget {
   final Payment payment;
   List<Color> gradientColors = [];
@@ -56,6 +57,20 @@ class HistoryCard extends StatelessWidget {
                     alignment: Alignment.bottomLeft,
                     child: Text(
                       "On ${this.payment.txTime.day}/${this.payment.txTime.month}/${this.payment.txTime.year}",
+                      style: TextStyle(
+                        fontFamily: "GSans",
+                        color: Colors.white,
+                        fontWeight: FontWeight.w300,
+                        fontSize: 16.0,
+                      ),
+                    )),
+                SizedBox(
+                  height: 12.0,
+                ),
+                Align(
+                    alignment: Alignment.bottomLeft,
+                    child: Text(
+                      "for ${this.payment.category}",
                       style: TextStyle(
                         fontFamily: "GSans",
                         color: Colors.white,

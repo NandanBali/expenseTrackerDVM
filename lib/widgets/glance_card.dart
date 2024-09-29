@@ -2,16 +2,17 @@
 
 import 'package:flutter/material.dart';
 
-class CustomCard extends StatelessWidget {
+class GlanceCard extends StatelessWidget {
   final String mainText;
   final String caption;
   final List<Color> gradientColors;
-  CustomCard(this.mainText, this.caption, this.gradientColors, {super.key});
+  final int scaleFactor;
+  const GlanceCard(this.mainText, this.caption, this.gradientColors, this.scaleFactor, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16.0),
+      padding: EdgeInsets.all(12.0),
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.transparent,
@@ -27,7 +28,7 @@ class CustomCard extends StatelessWidget {
         children: <Widget>[
           SizedBox(
             width: double.infinity,
-            height: 24.0,
+            height: 12.0,
           ),
           Text(
             this.mainText,
@@ -35,11 +36,11 @@ class CustomCard extends StatelessWidget {
               fontFamily: 'GSans',
               color: Colors.white,
               fontWeight: FontWeight.w600,
-              fontSize: 64.0,
+              fontSize: 48.0 / (scaleFactor),
             ),
           ),
           SizedBox(
-            height: 40.0,
+            height: 18.0 / scaleFactor,
           ),
           Align(
               alignment: Alignment.bottomLeft,
@@ -49,7 +50,7 @@ class CustomCard extends StatelessWidget {
                   fontFamily: "GSans",
                   color: Colors.white,
                   fontWeight: FontWeight.w300,
-                  fontSize: 16.0,
+                  fontSize: 16.0 / (scaleFactor),
                 ),
               )),
         ],

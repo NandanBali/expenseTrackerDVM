@@ -1,5 +1,5 @@
 library globals;
+import 'package:flutter/material.dart';
 
-import 'package:expensetracker/models/Account.dart';
-
-Account userAccount = Account([], 0.0, "");
+Color color1 = Colors.white;
+Color color2 = Colors.black;
